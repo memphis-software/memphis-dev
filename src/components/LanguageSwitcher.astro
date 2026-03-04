@@ -1,0 +1,20 @@
+---
+const { currentLang = "en", setLang } = Astro.props;
+---
+
+<div style="display:flex; gap:0.5rem; align-items:center;">
+  <button
+    style="padding:0.3rem 0.6rem; background:transparent; color:white; border:1px solid white; border-radius:4px; cursor:pointer;"
+    onClick={() => setLang("en")}
+    disabled={currentLang === "en"}
+  >
+    EN
+  </button>
+  <button
+    style="padding:0.3rem 0.6rem; background:transparent; color:white; border:1px solid white; border-radius:4px; cursor:pointer;"
+    onClick={() => setLang("fr")}
+    disabled={currentLang === "fr"}
+  >
+    FR
+  </button>
+</div>

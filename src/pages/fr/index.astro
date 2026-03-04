@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import FeatureSection from "../../components/FeatureSection.astro";
+import WhatsAppButton from "../../components/WhatsAppButton.astro";
+import fr from "../../i18n/fr.json";
+---
+
+<BaseLayout title="Memphis Dev - FR" lang="fr">
+<Hero lang="fr" />
+<FeatureSection lang="fr" />
+<WhatsAppButton />
+  <section style="padding:4rem 2rem; text-align:center;">
+    <h1 style="font-size:2.5rem; max-width:800px; margin:auto;">
+      {fr.heroTitle}
+    </h1>
+
+    <div style="margin-top:2rem;">
+      <a href="/fr/" style="color:#38bdf8;">Version française</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,26 @@
+---
+const phone = "+2290197358556"; // remplace par ton numéro réel
+---
+
+<a href={`https://wa.me/${phone.replace(/\D/g,'')}`} 
+   target="_blank"
+   style="
+     position:fixed; 
+     bottom:2rem; 
+     right:2rem; 
+     background:#25D366; 
+     color:white; 
+     padding:1rem; 
+     border-radius:50%; 
+     text-decoration:none; 
+     font-size:1.5rem; 
+     box-shadow:0 4px 6px rgba(0,0,0,0.3);
+     display:flex; 
+     justify-content:center; 
+     align-items:center;
+     transition:transform 0.2s ease;
+   "
+   onmouseover="this.style.transform='scale(1.1)';"
+   onmouseout="this.style.transform='scale(1)';">
+  💬
+</a>
