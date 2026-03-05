@@ -2,25 +2,36 @@
 const { lang = "en" } = Astro.props;
 ---
 
-<section class="section" id="services">
-  <h2 style="font-size:2rem; margin-bottom:3rem; font-weight:bold; color:#f1f5f9;">
+<section class="services" id="services">
+<div class="services-container">
+  <h2 class"services-title">
     {lang === "en" ? "Our Services" : "Nos Services"}
   </h2>
-
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;" >
-    <div class="card">
-      <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:1rem;">{lang === "en" ? "Web Development" : "Développement Web"}</h3>
-      <p style="color:#cbd5e1;">{lang === "en" ? "Clean and modern websites" : "Sites web propres et modernes"}</p>
+  <div class="services-grid">
+   <div class="service-card">
+      <h3>{lang === "en" ? "Web Development" : "Développement Web"}</h3>
+      <p>{lang === "en" ? "Modern, fast and scalable websites and web applications" : "Sites web et applications, modernes, sécurisés et rapides."}</p>
     </div>
-
-    <div class="card">
-      <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:1rem;">{lang === "en" ? "UI/UX Design" : "Design UI/UX"}</h3>
-      <p style="color:#cbd5e1;">{lang === "en" ? "User-centered design" : "Design centré utilisateur"}</p>
+    <div class="service-card">
+      <h3>{lang === "en" ? "UI/UX Design" : "Design UI/UX"}</h3>
+      <p>{lang === "en" ? "User-centered design" : "Design centré utilisateur"}</p>
     </div>
-
-    <div class="card">
-      <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:1rem;">{lang === "en" ? "Consulting" : "Conseil"}</h3>
-      <p style="color:#cbd5e1;">{lang === "en" ? "Strategy and digital guidance" : "Stratégie et accompagnement digital"}</p>
+    <div class="service-card">
+      <h3>{lang === "en" ? "AI Solutions" : "Solutions par l'IA"}</h3>
+      <p>{lang === "en" ? "Intelligent Systems powered by machine learning" : "Systèmes intelligents conçus à base de modèles ML"}</p>
     </div>
+    <div class="service-card">
+      <h3>{lang === "en" ? "Data Science" : "Science de Données"}</h3>
+      <p>{lang === "en" ? "Transform data into actionable insights and predictions" : "Transformer les données en des informtions exploitables, et en faire des prévisions"}</p>
+    </div>
+    <div class="service-card">
+      <h3>{lang === "en" ? "Automation" : "Automatisation"}</h3>
+      <p>{lang === "en" ? "Automate workflows and improve business efficiency" : "Automatiser les flux de travail, et améliorer l'efficacité de votre entreprise."}</p>
+    </div>
+    <div class="service-card">
+      <h3>{lang === "en" ? "Consulting" : "Conseil"}</h3>
+      <p>{lang === "en" ? "Strategy and digital guidance" : "Stratégie et accompagnement digital"}</p>
+    </div>
+  </div>
   </div>
 </section>
