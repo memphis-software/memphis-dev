@@ -5,21 +5,70 @@ import fr from "../i18n/fr.json";
 const t = lang === "en" ? en : fr;
 ---
 
-<section style="padding:8rem 2rem; text-align:center; max-width:1000px; margin:auto; background:linear-gradient(135deg,#0f172a,#1e293b); border-radius:1rem; box-shadow:0 8px 20px rgba(0,0,0,0.3);">
-  <h1 style="font-size:3rem; line-height:1.2; margin-bottom:1.5rem; font-weight:bold; color:#f1f5f9;">
+<section class="hero">
+<div class="hero-content">
+  <h1 class="hero-title"
+  style="
+      font-size:2.0rem; 
+      line-height:1.0;  
+  ">
+    We build <span class="typing"></span>
+  </h1>
+  <h1 class="hero-title"
+  style="
+      font-size:1.8rem; 
+      line-height:1.0;  
+  ">
     {t.heroTitle}
   </h1>
 
-  <p style="font-size:1.25rem; margin-bottom:2rem; color:#cbd5e1;">
-    {lang === "en" 
-      ? "We build digital experiences that accelerate business growth." 
-      : "Nous créons des expériences digitales qui boostent la croissance."}
+  <p class="hero-subtitle">
+    {lang === "en" ? "Web Development, data science and Intelligent Systems designed to help business grow faster." : "Développement Web, Science de données, et Systèmes Intelligents conçus pour booster votre business."}
   </p>
-
-  <a href={lang === "en" ? "/en/contact" : "/fr/contact"}
-     style="display:inline-block; padding:1rem 2.5rem; background:#38bdf8; color:#0f172a; font-weight:bold; border-radius:0.75rem; text-decoration:none; font-size:1.1rem; transition:all 0.3s ease;"
-     onmouseover="this.style.background='#0ea5e9'"
-     onmouseout="this.style.background='#38bdf8'">
+  <div class="hero-buttons">
+  <a href={lang === "en" ? "/contact" : "/contact"} 
+     class="hero-cta">
     {lang === "en" ? "Get in Touch" : "Contactez-nous"}
   </a>
+
+  <style>
+    @keyframes fadeInUp {
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+  </style>
+  </div></div>
 </section>
+<script>
+
+const words = [
+"AI solutions",
+"digital experiences",
+"web platforms",
+"data driven products"
+];
+
+let i = 0;
+const typing = document.querySelector(".typing");
+
+function changeWord(){
+
+typing.textContent = words[i];
+
+i++;
+
+if(i === words.length){
+i = 0;
+}
+
+}
+
+changeWord();
+
+setInterval(changeWord,2000);
+
+</script>
+
+

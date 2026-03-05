@@ -1,3 +1,7 @@
-<footer style="text-align:center; padding:2rem; background:#1e293b; color:#94a3b8;">
-  © 2026 Memphis Dev. All rights reserved.
+---
+const { lang = "en" } = Astro.props;
+---
+
+<footer style="padding:60px 20px; text-align:center; background:linear-gradient(135deg,#FB923C, #F97316);color:white;">
+  &copy; {new Date().getFullYear()} Memphis Dev. {lang === "en" ? "All rights reserved." : "Tous droits réservés."}
 </footer>

@@ -1,0 +1,28 @@
+---
+const { lang = "en" } = Astro.props;
+const t = lang === "en" ? {
+  title: "Our Projects"
+} : {
+  title: "Nos Projets"
+};
+
+const projects = [
+  { name: "Project A", desc: lang === "en" ? "Awesome web app" : "Super application web" },
+  { name: "Project B", desc: lang === "en" ? "E-commerce platform" : "Plateforme e-commerce" },
+  { name: "Project C", desc: lang === "en" ? "Mobile app design" : "Design d'application mobile" }
+];
+---
+
+<section class="section" id="projects">
+  <h2 style="font-size:2rem; margin-bottom:3rem; font-weight:bold; color:#f1f5f9;">
+    {t.title}
+  </h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;">
+    {projects.map(project => (
+      <div class="card">
+        <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:1rem;">{project.name}</h3>
+        <p style="color:#cbd5e1;">{project.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
