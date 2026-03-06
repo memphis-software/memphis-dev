@@ -9,14 +9,23 @@ const { lang = "en" } = Astro.props;
   </h2>
   <div class="services-grid">
    <div class="service-card">
+   <div class="feature-icon">
+   <i class="fa-solid fa-code"></i>
+   </div>
       <h3>{lang === "en" ? "Web Development" : "Développement Web"}</h3>
       <p>{lang === "en" ? "Modern, fast and scalable websites and web applications" : "Sites web et applications, modernes, sécurisés et rapides."}</p>
     </div>
     <div class="service-card">
+    <div class="feature-icon">
+   <i class="fa-solid fa-brain"></i>
+   </div>
       <h3>{lang === "en" ? "UI/UX Design" : "Design UI/UX"}</h3>
       <p>{lang === "en" ? "User-centered design" : "Design centré utilisateur"}</p>
     </div>
     <div class="service-card">
+    <div class="feature-icon">
+   <i class="fa-solid fa-laptop-code"></i>
+   </div>
       <h3>{lang === "en" ? "AI Solutions" : "Solutions par l'IA"}</h3>
       <p>{lang === "en" ? "Intelligent Systems powered by machine learning" : "Systèmes intelligents conçus à base de modèles ML"}</p>
     </div>
