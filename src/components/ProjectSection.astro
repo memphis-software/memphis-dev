@@ -7,22 +7,24 @@ const t = lang === "en" ? {
 };
 
 const projects = [
-  { name: "Project A", desc: lang === "en" ? "Awesome web app" : "Super application web" },
-  { name: "Project B", desc: lang === "en" ? "E-commerce platform" : "Plateforme e-commerce" },
-  { name: "Project C", desc: lang === "en" ? "Mobile app design" : "Design d'application mobile" }
+  { name: "AI Credit Scoring", desc: lang === "en" ? "Machine learning model predicting loan risks" : "Modèle d'apprentissage automaique (ML) prédisant les risques de prêt." },
+  { name: "Business website", desc: lang === "en" ? "Modern responsive websites for companies" : "Sites web modernes s'adaptant à tous types d'écrans (Téléphones, tablettes, ordinateurs.)" },
+  { name: "BConnect Platform", desc: lang === "en" ? "Business Networking Platform for entrepreneurs" : "Plateforme de réseautage professionnel pour les entrepreneurs" },
+  { name: "Data Dashboard", desc: lang === "en" ? "Interactive analytics dashboard for businesses" : "Tableau de bord analytique et interactif pour les entreprises." }
 ];
 ---
 
-<section class="section" id="projects">
-  <h2 style="font-size:2rem; margin-bottom:3rem; font-weight:bold; color:#f1f5f9;">
+<section class="projects" id="projects">
+<div class="projects-container">
+  <h2 class="section-title>
     {t.title}
   </h2>
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;">
+  <div class="projects-grid">
     {projects.map(project => (
-      <div class="card">
-        <h3 style="font-size:1.25rem; font-weight:bold; margin-bottom:1rem;">{project.name}</h3>
-        <p style="color:#cbd5e1;">{project.desc}</p>
+      <div class="project-card">
+        <h5>{project.name}</h5>
+        <p style="font-size:18px;margin-top:10px;">{project.desc}</p>
       </div>
     ))}
-  </div>
+  </div></div>
 </section>
