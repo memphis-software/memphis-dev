@@ -2,6 +2,27 @@
 const { lang = "en" } = Astro.props;
 ---
 
-<footer style="padding:60px 20px; text-align:center; background:linear-gradient(135deg,#FB923C, #F97316);color:white;">
-  &copy; {new Date().getFullYear()} Memphis Dev. {lang === "en" ? "All rights reserved." : "Tous droits réservés."}
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>Memphis Dev</h3>
+      <p>Web Development • AI Solutions • Digital Innovation</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Memphis Dev — All rights reserved</p>
+  </div>
+
 </footer>
