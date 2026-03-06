@@ -398,6 +398,61 @@ body {
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
 }
 
+/* ========== SECTION PRICINGS ========== */
+.pricing{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.pricing-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.pricing-card{
+  background:#111;
+  color:white;
+  padding:30px;
+  border-radius:12px;
+  width:280px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.pricing-card h4{
+  font-size:32px;
+  margin:15px 0;
+}
+
+.pricing-card ul{
+  list-style:none;
+  padding:0;
+}
+
+.pricing-card li{
+  margin:10px 0;
+}
+
+.pricing-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:orange;
+  color:black;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+.pricing-btn:hover{
+  background:#ff8c00;
+}
+
+.featured{
+  transform: scale(1.05);
+  border:2px solid orange;
+}
 /* ========== CARDS ========== */
 .card {
   background: #1e293b;
