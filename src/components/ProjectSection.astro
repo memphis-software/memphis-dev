@@ -16,14 +16,15 @@ const projects = [
 
 <section class="projects" id="projects">
 <div class="projects-container">
-  <h2 class="section-title>
+  <h2 class="section-title">
     {t.title}
   </h2>
+<p class="section-subtitle">Some of the solutions we've built for businesses and digital platforms.</p>
   <div class="projects-grid">
     {projects.map(project => (
       <div class="project-card">
-        <h5>{project.name}</h5>
-        <p style="font-size:18px;margin-top:10px;">{project.desc}</p>
+        <h3>{project.name}</h3>
+        <p class="contact">{project.desc}</p>
       </div>
     ))}
   </div></div>
