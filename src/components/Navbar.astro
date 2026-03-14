@@ -12,15 +12,14 @@ const switchLangHref = lang === "en" ? "/fr/" : "/en/";
 const switchLangLabel = lang === "en" ? "FR" : "EN";
 ---
 
-<nav style="display:flex; justify-content:space-between; padding:1rem 2rem; background:#111827; color:white;">
-  <div style="font-weight:bold;">Memphis Dev</div>
+<nav>Memphis Dev</div>
 
-  <ul style="display:flex; list-style:none; gap:1.5rem; margin:0; padding:0;">
+  <ul>
     {links.map(link => (
-      <li><a href={link.href} style="color:white; text-decoration:none;">{link.label}</a></li>
+      <li><a href={link.href}>{link.label}</a></li>
     ))}
     <li>
-      <a href={switchLangHref} style="color:#38bdf8; font-weight:bold;">{switchLangLabel}</a>
+      <a href={switchLangHref}>{switchLangLabel}</a>
     </li>
   </ul>
 </nav>

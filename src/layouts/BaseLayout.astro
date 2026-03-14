@@ -2,7 +2,7 @@
 import "../styles/main.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-const { title = "Memphis Dev", lang = "en" } = Astro.props;
+const { title = "Memphis Dev | Web & AI Solutions", lang = "fr" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -10,8 +10,10 @@ const { title = "Memphis Dev", lang = "en" } = Astro.props;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Memphis Dev builds modern websites, web applications and AI solutions for businesses." />
   <title>{title}</title>
   <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="icon" type="image/x-icon" href="/favicon_memphis.jpg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -20,7 +22,6 @@ const { title = "Memphis Dev", lang = "en" } = Astro.props;
 
   <header>
     <nav class="navbar">
-
       <div class="logo">
         Memphis Dev
       </div>
@@ -29,7 +30,7 @@ const { title = "Memphis Dev", lang = "en" } = Astro.props;
         <li><a href="/">Home</a></li>
         <li><a href="/#services">Services</a></li>
         <li><a href="/#projects">Projects</a></li>
-        <li><a href="/#pricings">Pricings</a></li>
+        <li><a href="/#pricings">Tarification</a></li>
         <li><a href="/#contact">Contact</a></li>
       </ul>
 
