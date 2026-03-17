@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --primary-color: #ff7a00;
 }
@@ -79,7 +81,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #2563EB
+  color: orange                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
 
 .lang-switcher a {
@@ -122,7 +124,7 @@ body {
 
   .nav-links.active {
     opacity: 1;
-    transformY(0);
+    transform: translateY(0);
     pointer-events: auto;
     display: flex;
   }

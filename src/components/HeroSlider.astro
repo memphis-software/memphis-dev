@@ -1,0 +1,19 @@
+---
+// src/components/HeroSlider.astro
+const slides = [
+  { src: '/images/data.jpg', text: 'We build AI Solutions' },
+  { src: '/images/data-science.jpg', text: 'We build web platforms' }
+];
+---
+<div class="w-full h-64 overflow-hidden relative">
+  <div class="flex w-[200%] h-full animate-slide">
+    {slides.map(slide => (
+      <div class="relative w-1/2 h-full">
+        <img src={slide.src} class="w-full h-full object-cover" />
+        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-start p-4">
+          <h2 class="text-white text-2xl font-bold animate-fadeLeft">{slide.text}</h2>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

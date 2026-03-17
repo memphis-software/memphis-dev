@@ -1,22 +1,27 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Hero from "../../components/Hero.astro";
-import FeatureSection from "../../components/FeatureSection.astro";
-import ProjectSection from "../../components/ProjectSection.astro";
-import PricingSection from "../../components/PricingSection.astro";
-{/** import TestimonialSection from "../../components/TestimonialSection.astro"; */}
-import ContactSection from "../../components/ContactSection.astro";
-import WhatsAppButton from "../../components/WhatsAppButton.astro";
-import Footer from "../../components/Footer.astro";
-import en from "../../i18n/en.json";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import FeatureSection from '../../components/FeatureSection.astro';
+import ProjectSection from '../../components/ProjectSection.astro';
+import PricingSection from '../../components/PricingSection.astro';
+{/** import TestimonialSection from '../../components/TestimonialSection.astro'; */}
+import ContactSection from '../../components/ContactSection.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import Footer from '../../components/Footer.astro';
+import en from '../../i18n/en.json';
+import HeroSlider from '../../components/HeroSlider.astro';
+
+const slides = [
+  { image: '/images/laptop.jpeg', alt: 'Slide 1', title: 'Welcome to Our Site', text: 'We make amazing things happen.' },
+  { image: '/images/data-science.jpg', alt: 'Slide 2', title: 'Our Projects', text: 'Innovative solutions just for you.' },
+  { image: '/images/metiers.jpg', alt: 'Slide 3', title: 'Join Us', text: 'Let’s create something incredible together.' },
+];
 ---
 
 <BaseLayout title="Memphis Dev | Web & AI Solutions - EN" lang="en">
-<Hero lang="en" />
-<FeatureSection lang="en" />
+  <HeroSlider slides={slides} interval={5000} />
 <ProjectSection lang="en" />
 <PricingSection lang="en" />
-<TestimonialSection lang="en" />
 <ContactSection lang="en" />
 <WhatsAppButton />
   <section style="padding:4rem 2rem; text-align:center;">
