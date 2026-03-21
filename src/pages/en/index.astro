@@ -1,11 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Hero from '../../components/Hero.astro';
-import FeatureSection from '../../components/FeatureSection.astro';
-import ProjectSection from '../../components/ProjectSection.astro';
-import PricingSection from '../../components/PricingSection.astro';
-{/** import TestimonialSection from '../../components/TestimonialSection.astro'; */}
-import ContactSection from '../../components/ContactSection.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import Footer from '../../components/Footer.astro';
 import en from '../../i18n/en.json';
@@ -16,16 +10,7 @@ const { lang = "en" } = Astro.props;
 
 <BaseLayout title="Memphis Dev | Web & AI Solutions - EN" lang="en">
   <FadeHeroSlider lang="en" />
-  <br />
-  <div class="hero-buttons">
-  <a class="inline-block" href={lang === "en" ? "/#contact" : "/#contact"} 
-     class="hero-cta">
-    {lang === "en" ? "Get in Touch" : "Contactez-nous"}
-  </a>
-<ProjectSection lang="en" />
-<PricingSection lang="en" />
-<ContactSection lang="en" />
-<WhatsAppButton />
+  <WhatsAppButton />
   <section style="padding:4rem 2rem; text-align:center;">
     <h3 style="margin:auto;">
       {en.heroTitle}

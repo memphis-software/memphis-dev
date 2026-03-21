@@ -1,22 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PricingSection from '../../components/PricingSection.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import Footer from '../../components/Footer.astro';
-import fr from '../../i18n/fr.json';
-import FadeHeroSlider from '../../components/FadeHeroSlider.astro';
-const { lang = "fr" } = Astro.props;
+import en from '../../i18n/en.json';
+const { lang = "en" } = Astro.props;
+
 ---
-<BaseLayout title="Memphis Dev | Web & Solutions IA - FR" lang="fr">
-  <FadeHeroSlider lang="fr" />
+
+<BaseLayout title="Memphis Dev | Web & AI Solutions - EN" lang="en">
+  <PricingSection lang="en" />
   <WhatsAppButton />
   <section style="padding:4rem 2rem; text-align:center;">
     <h3 style="margin:auto;">
-      {fr.heroTitle}
+      {en.heroTitle}
     </h>
 
     <div style="margin-top:2rem;">
-      <a href="/en/" style="color:#38bdf8;">English version</a>
+      <a href="/fr/" style="color:#38bdf8;">Version française</a>
     </div>
   </section>
-  <Footer lang="fr" />
+  <Footer lang="en" />
 </BaseLayout>

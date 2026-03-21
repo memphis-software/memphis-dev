@@ -1,7 +1,6 @@
 ---
 const lang = 'en'; // Hardcoded for now, change to 'fr' for French slides
 
-// Slides defined inside the component
 const slides = lang === 'fr'
   ? [
       { image: '/images/data.jpg', alt: 'Slide 1 FR', title: 'Bienvenue', text: 'Nous créons des solutions modernes.' },
@@ -22,11 +21,11 @@ const slides = lang === 'fr'
       <div class="absolute inset-0 bg-black/50"></div>
 
       <div class="absolute inset-0 flex items-center justify-center px-6 md:px-16">
-        <div id={`text-${i}`} class="text-white max-w-2xl text-center space-y-4 animate-slide-left">
+        <div id={`text-${i}`} class="text-white max-w-2xl text-center space-y-4">
           <h2 class="text-3xl md:text-5xl font-bold leading-tight">{slide.title}</h2>
-          <p class="text-sm md:text-lg opacity-90">{slide.text}</p>
+          <p class="text-sm md:text-lg opacity-90 font-bold">{slide.text}</p>
           <div class="flex justify-center">
-            <a href="#contact" class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-semibold">
+            <a href="#contact" class="bg-orange-500 hover:bg-green-600 px-6 py-3 rounded-lg font-semibold">
               Get Started
             </a>
           </div>
@@ -67,15 +66,11 @@ const slides = lang === 'fr'
     });
 
     texts.forEach((text, i) => {
-      text.style.opacity = 0;
-      text.style.transform = 'translateX(-50px)';
-      text.style.transition = 'none';
       if (i === newIndex) {
-        setTimeout(() => {
-          text.style.transition = 'transform 0.7s ease, opacity 0.7s ease';
-          text.style.opacity = 1;
-          text.style.transform = 'translateX(0)';
-        }, 50);
+        // Reset animation
+        text.classList.remove('animate-slide-left');
+        void text.offsetWidth; // trigger reflow
+        text.classList.add('animate-slide-left');
       }
     });
 
@@ -87,7 +82,6 @@ const slides = lang === 'fr'
   window.prevSlide = () => showSlide((index - 1 + slidesEl.length) % slidesEl.length);
   window.goToSlide = (i) => showSlide(i);
 
-  // ✅ Fixed: use a literal interval instead of server-side variable
   setInterval(() => window.nextSlide(), 5000);
 
   showSlide(0);

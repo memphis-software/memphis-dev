@@ -1,18 +1,29 @@
 ---
 const { lang = "en" } = Astro.props;
 
+const path = Astro.url.pathname;
+
+// Detect current language from URL instead (more reliable)
+const isFrench = path.startsWith("/fr");
+
+// Build links dynamically
 const links = [
-  { href: lang === "en" ? "/en/" : "/fr/", label: lang === "en" ? "Home" : "Accueil" },
-  { href: lang === "en" ? "/en/projects" : "/fr/projects", label: lang === "en" ? "Projects" : "Projets" },
-  { href: lang === "en" ? "/en/pricings" : "/fr/pricings", label: lang === "en" ? "Pricings" : "Facturation" },
-  { href: lang === "en" ? "/en/contact" : "/fr/contact", label: lang === "en" ? "Contact" : "Contact" },
+  { href: isFrench ? "/fr/" : "/en/", label: isFrench ? "Accueil" : "Home" },
+  { href: isFrench ? "/fr/services" : "/en/services", label: isFrench ? "Services" : "Services" },
+  { href: isFrench ? "/fr/projects" : "/en/projects", label: isFrench ? "Projets" : "Projects" },
+  { href: isFrench ? "/fr/pricings" : "/en/pricings", label: isFrench ? "Facturation" : "Pricings" },
+  { href: isFrench ? "/fr/contact" : "/en/contact", label: isFrench ? "Contact" : "Contact" },
 ];
 
-const switchLangHref = lang === "en" ? "/fr/" : "/en/";
-const switchLangLabel = lang === "en" ? "FR" : "EN";
+// 🔥 Smart switch (keeps same page)
+const switchLangHref = isFrench
+  ? path.replace("/fr", "/en")
+  : path.replace("/en", "/fr");
+
+const switchLangLabel = isFrench ? "EN" : "FR";
 ---
 
-<nav>Memphis Dev</div>
+<nav><div>Memphis Dev</div>
 
   <ul>
     {links.map(link => (
