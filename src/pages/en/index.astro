@@ -9,17 +9,19 @@ import ContactSection from '../../components/ContactSection.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import Footer from '../../components/Footer.astro';
 import en from '../../i18n/en.json';
-import HeroSlider from '../../components/HeroSlider.astro';
+import FadeHeroSlider from '../../components/FadeHeroSlider.astro';
+const { lang = "en" } = Astro.props;
 
-const slides = [
-  { image: '/images/laptop.jpeg', alt: 'Slide 1', title: 'Welcome to Our Site', text: 'We make amazing things happen.' },
-  { image: '/images/data-science.jpg', alt: 'Slide 2', title: 'Our Projects', text: 'Innovative solutions just for you.' },
-  { image: '/images/metiers.jpg', alt: 'Slide 3', title: 'Join Us', text: 'Let’s create something incredible together.' },
-];
 ---
 
 <BaseLayout title="Memphis Dev | Web & AI Solutions - EN" lang="en">
-  <HeroSlider slides={slides} interval={5000} />
+  <FadeHeroSlider lang="en" />
+  <br />
+  <div class="hero-buttons">
+  <a class="inline-block" href={lang === "en" ? "/#contact" : "/#contact"} 
+     class="hero-cta">
+    {lang === "en" ? "Get in Touch" : "Contactez-nous"}
+  </a>
 <ProjectSection lang="en" />
 <PricingSection lang="en" />
 <ContactSection lang="en" />

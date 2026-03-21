@@ -3,20 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  @keyframes slide {
-    0%, 50% { transform: translateX(0); }
-    50.01%, 100% { transform: translateX(-50%); }
-  }
-  .animate-slide {
-    animation: slide 6s infinite linear;
-  }
 
-  @keyframes fadeLeft {
-    0% { opacity: 0; transform: translateX(-50px); }
-    100% { opacity: 1; transform: translateX(0); }
-  }
-  .animate-fadeLeft {
-    animation: fadeLeft 1s forwards;
-  }
+/* Add this in global.css or inside <style> in HeroSlider.astro */
+
+@keyframes slide-in-left {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-left {
+  animation: slide-in-left 0.7s ease forwards;
 }
