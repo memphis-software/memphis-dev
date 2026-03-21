@@ -1,5 +1,29 @@
 {
-  "heroTitle": "Nous concevons des systèmes digitaux qui accélèrent la croissance des entreprises",
-  "pricingTitle": "Tarification",
-  "pricingDetail": "Nous fournissons une tarification simple et transparente pour vos projets."
+  "hero": {
+    "slides": [
+      { "title": "Memphis Dev", "text": "Nous créons des solutions digitales." },
+      { "title": "Nos Projets", "text": "Nous créons des applications innovantes et évolutives." },
+      { "title": "Travaillez avec nous", "text": "Créons quelque chose de puissant." }
+    ]
+  },
+  "navbar": {
+    "home": "Accueil",
+    "services": "Services",
+    "projects": "Projets",
+    "pricings": "Facturation",
+    "contact": "Contact"
+  },
+  "pricing": {
+  "title":"Tarification",
+  "intro": "Nous fournissons une tarification simple et transparente pour vos projets."
+},
+"contact": {
+  "title":"Contactez-nous",
+  "intro": "Vous avez un projet en tête? Développons-le ensemble.",
+  "name":"Votre nom",
+  "email":"Votre email",
+  "msg":"Votre message",
+  "send":"Envoyer"
+},
+  "heroTitle": "Nous concevons des systèmes digitaux qui accélèrent la croissance des entreprises"
 }

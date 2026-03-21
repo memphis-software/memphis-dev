@@ -1,4 +1,18 @@
 {
+  "hero": {
+    "slides": [
+      { "title": "Welcome", "text": "We build modern solutions." },
+      { "title": "Our Projects", "text": "Innovative and scalable apps." },
+      { "title": "Work With Us", "text": "Let’s create something powerful." }
+    ]
+  },
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "pricings": "Pricings",
+    "contact": "Contact"
+  },
   "heroTitle": "We Engineer Digital Systems That Drive Business Growth",
   "pricingTitle": "Our pricings",
   "pricingDetail": "We provide simple and transparent pricing for your projects."
