@@ -1,9 +1,10 @@
 ---
 import "../styles/global.css";
 import "../styles/main.css";
-import Navbar from "../components/Navbar.astro";
+import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
-const { title = "Memphis Dev | Web & AI Solutions", lang = "fr" } = Astro.props;
+const { title = "Memphis Dev | Web & AI Solutions", lang = "en" } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -17,39 +18,8 @@ const { title = "Memphis Dev | Web & AI Solutions", lang = "fr" } = Astro.props;
   </head>
 
 <body>
-
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        Memphis Dev
-      </div>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/fr/services">Services</a></li>
-        <li><a href="/fr/projects">Projets</a></li>
-        <li><a href="/fr/pricings">Tarification</a></li>
-        <li><a href="/fr/contact">Contact</a></li>
-      </ul>
-
-        <!-- 🌍 Language Switcher -->
-        <div class="nav-right">
-        <div class="lang-switcher">
-          <a href="/fr">FR</a><span> | </span>
-          <a href="/en">EN</a>
-        </div></div>
-      
-
-      <!-- 🍔 Burger -->
-      <div class="burger" id="burger">
-        ☰
-      </div>
-    </nav>
-  </header>
-
-  <main>
+    <NavBar lang={lang} />
     <slot />
-  </main>
 
   <script>
     const burger = document.getElementById("burger");
