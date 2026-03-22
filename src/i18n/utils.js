@@ -13,3 +13,13 @@ export function useTranslations(lang) {
     return dict[key];
   };
 }
+// Detect language from URL
+export function getLangFromUrl(url) {
+  const lang = url.pathname.split('/')[1];
+  return lang === 'fr' ? 'fr' : 'en';
+}
+
+// 🔥 NEW: Get translations
+export function getTranslations(lang = 'en') {
+  return lang === 'fr' ? fr : en;
+}
