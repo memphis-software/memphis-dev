@@ -1,5 +1,16 @@
 ---
 const { lang = "en" } = Astro.props;
+import en from './en.json';
+import fr from './fr.json';
+
+export const getTranslations = (lang = 'en') => {
+  switch(lang) {
+    case 'fr': return fr;
+    case 'en':
+    default: return en;
+  }
+};
+
 ---
 
 <section class="services" id="services">
